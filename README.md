@@ -2,9 +2,8 @@
 
 Build a docker image
 ```
-docker build -t mac-boot -f ./Dockerfile ./target
+docker build -t mac-boot
 ```
-Set docker context to `./target`, `ADD ./mac-docker-1.0-SNAPSHOT.jar /app` will works in Dockerfile because `mac-docker-1.0-SNAPSHOT.jar` is in `./target`
 
 Run a container in background
 ```
