@@ -1,8 +1,13 @@
 # mac-docker
 
+Build spring boot app
+```
+mvn clean install
+```
+
 Build a docker image
 ```
-docker build -t mac-boot
+docker build -t mac-boot .
 ```
 
 Run a container in background
