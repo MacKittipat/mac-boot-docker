@@ -2,8 +2,11 @@ FROM openjdk:8
 
 WORKDIR /app
 
-ADD ./target/mac-docker-1.0-SNAPSHOT.jar /app
+ADD ./target/dependencies ./
+ADD ./target/spring-boot-loader ./
+ADD ./target/snapshot-dependencies ./
+ADD ./target/application ./
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "mac-docker-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
