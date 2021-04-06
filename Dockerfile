@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8u282-jre-slim-buster
 
 WORKDIR /app
 
