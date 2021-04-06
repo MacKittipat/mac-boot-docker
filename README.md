@@ -20,5 +20,7 @@ View log
 docker logs -f mac-boot
 ```
 
-
+Extract Jar
+```
 java -Djarmode=layertools -jar .\target\mac-docker-1.0-SNAPSHOT.jar extract
+```
