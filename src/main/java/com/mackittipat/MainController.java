@@ -35,14 +35,14 @@ public class MainController {
 
     @GetMapping("/greeting")
     public String greeting() {
-        log.info("greeting");
-        return "greeting";
+        log.info("Greeting");
+        return "Greeting";
     }
 
     @PostMapping("/hi")
     public String hi() {
-        log.info("hi");
-        return "hi";
+        log.info("Hi");
+        return "Hi";
     }
 
     @GetMapping("/upload")
@@ -51,6 +51,6 @@ public class MainController {
         String uuid = UUID.randomUUID().toString();
         AmazonS3 s3 = AmazonS3ClientBuilder.standard().withRegion(Regions.AP_SOUTHEAST_1).build();
         s3.putObject("mac-file-bucket", uuid, uuid);
-        return "OK";
+        return "OK. Upload success";
     }
 }
