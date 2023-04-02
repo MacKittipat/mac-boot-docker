@@ -25,3 +25,11 @@ View log
 ```
 docker logs -f mac-boot
 ```
+
+Endpoint 
+```
+http://localhost:8080/
+http://localhost:8080/hello
+http://localhost:8080/api/mac
+http://localhost:8080/api/mac/java
+```

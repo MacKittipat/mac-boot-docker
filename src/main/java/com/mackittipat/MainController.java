@@ -1,16 +1,10 @@
 package com.mackittipat;
 
-import com.amazonaws.regions.Regions;
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.UUID;
 
 @RestController
 public class MainController {
@@ -33,24 +27,16 @@ public class MainController {
         return "Hello";
     }
 
-    @GetMapping("/greeting")
-    public String greeting() {
-        log.info("Greeting");
-        return "Greeting";
+    @GetMapping("/api/mac")
+    public String apiMac() {
+        log.info("API Mac");
+        return "API Mac";
     }
 
-    @PostMapping("/hi")
-    public String hi() {
-        log.info("Hi");
-        return "Hi";
+    @GetMapping("/api/mac/java")
+    public String apiMacJava() {
+        log.info("API Mac Java");
+        return "API Mac Java";
     }
 
-    @GetMapping("/upload")
-    public String upload() {
-        log.info("Uploading ...");
-        String uuid = UUID.randomUUID().toString();
-        AmazonS3 s3 = AmazonS3ClientBuilder.standard().withRegion(Regions.AP_SOUTHEAST_1).build();
-        s3.putObject("mac-file-bucket", uuid, uuid);
-        return "OK. Upload success";
-    }
 }

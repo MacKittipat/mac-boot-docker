@@ -1,4 +1,4 @@
-FROM openjdk:8u282-jre-slim-buster
+FROM eclipse-temurin:11-alpine
 
 WORKDIR /app
 
